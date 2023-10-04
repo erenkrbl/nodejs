@@ -22,8 +22,14 @@ app.all('/', (req, res) => {
     res.send('WELCOME TO BLOG API')
 })
 
+
+
 // continue from here...
 
 /* ------------------------------------------------------- */
+// error handling
+
+app.use(require('./src/errorHandler.js'))
+
 
 app.listen(PORT, () => console.log('Running: http://127.0.0.1:' + PORT))
