@@ -22,7 +22,7 @@ app.all('/', (req, res) => {
     res.send('WELCOME TO BLOG API')
 })
 
-
+require('./src/dbConnection')
 
 // continue from here...
 
