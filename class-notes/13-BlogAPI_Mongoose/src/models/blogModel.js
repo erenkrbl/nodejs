@@ -31,6 +31,27 @@ const nameSchema = new mongoose.Schema({
     timestamps: true, // Create and Manage 'createdAt' and 'updatedAt'
 })
 
+
+/* ------------------------------------------------------- */
+// blogCategory
+
+const blogCategorySchema = new mongoose.Schema({
+
+    // _id
+
+    name: {
+        type: String,
+        trim: true,
+        required: true
+    },
+
+    
+}, { collection: 'blogCategaries', timestamps: true })
+
+
+
+
+
 /* ------------------------------------------------------- */
 // blogPost:
 
@@ -67,6 +88,6 @@ const blogPostSchema = new mongoose.Schema({
 // }
 
 module.exports = {
-    // BlogCategory:
+    BlogCategory: mongoose.model('BlogCategory', blogPostSchema),
     BlogPost: mongoose.model('BlogPost', blogPostSchema)
 }
